@@ -1,0 +1,22 @@
+﻿@using TechAcademyInsurance.Models
+@model Quote
+@{
+    ViewBag.Title = "Your Quote";
+}
+<div = class="container">
+    <div class="jumbotron">
+        <h1>Insurance Quote</h1>
+        <p class="lead">Insurance Quote for your @Model.CarYear @Model.CarMake @Model.CarModel</p>
+    </div>
+    
+
+    @foreach (string factor in Model.Factors)
+    {
+        <p>@factor</p>
+    }
+    <p>
+        <strong>Total: </strong>$@Model.QuotePrice
+    </p>
+
+
+</div>

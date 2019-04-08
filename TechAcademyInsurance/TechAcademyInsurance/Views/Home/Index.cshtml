@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Insurance Barn";
+}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Insurance Barn</h1>
+        <p class="lead">Providing Expensive Insurance for Bad Drivers since 2019!</p>
+    </div>
+    <div>
+        <h2>Begin Your Quote</h2>
+        <p>
+            @using (Html.BeginForm("StartQuote", "Home", FormMethod.Post))
+            {
+            <p>
+                <input name="FirstName" type="text" placeholder="First Name" required />
+            </p>
+            <p>
+                <input name="LastName" type="text" placeholder="Last Name" required />
+            </p>
+            <p>
+                <input name="Email" type="email" placeholder="Email Address" required />
+            </p>
+            <p>
+                <input name="DOB" type="date" required />
+            </p>
+            <p>
+                <button type="submit" class="btn btn-primary">Start Quote</button>
+            </p>
+        }
+    </div>
+</div>
+

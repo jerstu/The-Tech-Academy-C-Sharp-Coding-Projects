@@ -1,0 +1,72 @@
+﻿@using TechAcademyInsurance.Models
+@model Admin
+
+@{
+    ViewBag.Title = "Admin";
+}
+@{
+
+    foreach (Quote quote in Model.Quotes)
+    {
+        Customer customer = Model.Customers.Where(x => x.ID == quote.CustomerID).First();
+        quote.BuildQuote(customer.DOB);
+    }
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Insurance Barn</h1>
+        <p class="lead">Admin View</p>
+    </div>
+
+
+
+    @foreach (Quote quote in Model.Quotes)
+    {
+        Customer customer = Model.Customers.Where(x => x.ID == quote.CustomerID).First();
+        <div class="row">
+            <div class="col">
+                <h4><span class="badge badge-primary">#@quote.QuoteID</span> <span>@quote.CarYear @quote.CarMake @quote.CarModel</span></h4>
+            </div>
+            <div class="col">
+                <h4 class="text-right"><span>@quote.QuoteDateTime.ToLongDateString()</span></h4>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-1">
+                <h5><span class="badge badge-success">@customer.ID</span></h5>
+            </div>
+            <div class="col">
+                <h5>@customer.FirstName @customer.LastName</h5>
+                <h5>@customer.Email<br />DOB: @customer.DOB.ToShortDateString()</h5>
+                @if (quote.DUI)
+                {
+                    <h5><span class="badge badge-danger">DUI</span></h5>
+                }
+                @if (quote.Tickets > 0)
+                {
+                    <h5><span class="badge badge-warning">@quote.Tickets speeding tickets</span></h5>
+                }
+            </div>
+
+
+            
+            <div class="col mb-5">
+                <h4>
+                    @foreach (String factor in quote.Factors)
+                    {
+                        <span class="badge badge-light float-right">@factor</span><br />
+                    }
+                    <span class="alert alert-primary float-right">Quoted Monthly Price: $@quote.QuotePrice</span>
+                </h4>
+            </div>
+
+        </div>
+
+
+    }
+
+
+
+</div>

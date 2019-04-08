@@ -1,0 +1,47 @@
+﻿@using TechAcademyInsurance.Models
+@model Customer
+@{
+    ViewBag.Title = "Starting New Quote";
+}
+<div class="container">
+    <h2>Hello, @Model.FirstName! Let's get some more info for your quote.</h2>
+
+    <div class="row">
+        <div class="col">
+            <p>
+                @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+                {
+
+                    <input name="CustomerID" type="hidden" value="@Model.ID" required />
+                    <input name="DOB" type="hidden" value="@Model.DOB" required />
+                <p>
+                    Have you ever had a dui?<br />
+                    <input name="DUI" type="radio" value="true" required /> Yes <br />
+                    <input name="DUI" type="radio" value="false" checked required /> No
+                </p>
+                <p>
+                    How many speeding tickets have you had? <input name="Tickets" type="number" min="0" max="99" placeholder="0" required />
+                </p>
+
+                <p>What are you insuring?</p>
+                <p>
+                    Year <input name="Year" type="number" min=1900 max="@DateTime.Now.Year+1" placeholder="Year" required />
+                    <br />
+                    Make <input name="Make" type="text" placeholder="Make" required />
+                    <br />
+                    Model <input name="Model" type="text" placeholder="Model" required />
+                </p>
+                <p>
+                    Would you Like Full Coverage?<br />
+                    <input name="FullCoverage" type="radio" value="true" required /> Yes<br />
+                    <input name="FullCoverage" type="radio" value="false" checked /> No
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Get My Quote</button>
+                </p>
+
+
+            }
+            </div>
+        </div>
+    </div>
