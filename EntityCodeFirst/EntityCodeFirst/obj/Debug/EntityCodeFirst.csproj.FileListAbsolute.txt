@@ -1,0 +1,12 @@
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityCodeFirst.exe.config
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityCodeFirst.exe
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityCodeFirst.pdb
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityFramework.dll
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityFramework.xml
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\obj\Debug\EntityCodeFirst.csprojAssemblyReference.cache
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\obj\Debug\EntityCodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\obj\Debug\EntityCodeFirst.csproj.CopyComplete
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\obj\Debug\EntityCodeFirst.exe
+C:\Users\jerst\techacademy\The-Tech-Academy-C-Sharp-Coding-Projects\EntityCodeFirst\EntityCodeFirst\obj\Debug\EntityCodeFirst.pdb
