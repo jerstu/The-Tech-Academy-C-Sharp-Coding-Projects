@@ -20,6 +20,8 @@ namespace EntityCodeFirst
         public float QuotePrice { get; set; }
         public string Factors { get; set; }
 
+        public virtual Customer Customer { get; set; }
+
         public Quote()
         {
 
@@ -41,6 +43,7 @@ namespace EntityCodeFirst
             Console.Write("Would you like full coverage? true/false: ");
             FullCoverage = Convert.ToBoolean(Console.ReadLine());
             QuoteDateTime = DateTime.Now;
+            CustomerID = customer.ID;
             BuildQuote(customer);
         }
 
@@ -111,12 +114,16 @@ namespace EntityCodeFirst
             return years;
         }
 
-        public void ViewQuote(Customer customer)
+        public void ViewQuote(Customer Customer)
         {
+            using (var ctx = new InsuranceContext())
+            {
+                
+            }
             Console.WriteLine("Quote # {0} issued on {1} at {2}", QuoteID, QuoteDateTime.Date.ToShortDateString(), QuoteDateTime.ToShortTimeString());
             Console.WriteLine("{0} {1} {2}", CarYear, CarMake, CarModel);
-            Console.WriteLine("Cust ID: {0} {1} {2}\n\t{3} {4}", customer.ID, customer.FirstName, customer.LastName,
-                                customer.Email, customer.DOB.ToShortDateString());
+            Console.WriteLine("Cust ID: {0} {1} {2}\n\t{3} {4}", Customer.ID, Customer.FirstName, Customer.LastName,
+                                Customer.Email, Customer.DOB.ToShortDateString());
             if (DUI) Console.WriteLine("Has DUI!");
             if (Tickets > 0) Console.WriteLine("Speeding Tickets: {0}", Tickets);
             Console.WriteLine(Factors);
